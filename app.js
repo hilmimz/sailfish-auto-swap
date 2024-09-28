@@ -42,13 +42,16 @@ async function main() {
     if (walletOption == 'n') {
         return 0;
     } else {
+        const pair_index = readlineSync.question(
+            '\nWhich token pair to swap?\n1. USDC-EDU\n2. USDC-SAIL\n3. USDC-GRASP\n'
+          );
         const numTx = readlineSync.question(
             '\nHow many transaction do you want? '
           );
         for (let i = 0; i < numTx; i++) {
             curTx = i+1;
             console.log(('Processing #'+curTx+' transaction').yellow);
-            result = await swap();
+            result = await swap(pair_index);
             logToFile(result.hash);
             console.log(('✅ '+result.hash).green)
             if (curTx < numTx) {
