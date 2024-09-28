@@ -1,0 +1,5 @@
+{
+    "privateKey": "your_private_key_here",
+    "RPC_PROVIDER": "https://rpc.open-campus-codex.gelato.digital",
+    "SailfishContract": "0xB97582DCB6F2866098cA210095a04dF3e11B76A6"
+}
