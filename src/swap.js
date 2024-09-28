@@ -1,6 +1,5 @@
 var ethers = require('ethers');
 var fs = require('fs');
-var web3 = require('web3');
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
 
 const ABI_FILE_PATH = './ABI/Vault.json'
